@@ -1,0 +1,173 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+.resourceTiming {
+    width: 99%;
+    height: 600px;
+}
+
+.tooltip {
+    background: #eee;
+    color: #333;
+    display: none;
+    font-size: 12px;
+    padding: 10px;
+    position: absolute;
+    text-align: center;
+    z-index: 10;
+    border: 1px solid #d8d8d8;
+    border-radius: 5px;
+
+}
+.tooltip:before {
+	border:20px solid transparent;
+	border-bottom-color: #eee;
+	top:-38px;
+	left: 50%;
+	position: absolute;
+	content:"";
+	z-index: 12;
+
+
+}
+.break{
+	white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    cursor: pointer;
+}
+.tooltip:after {
+
+	top:-40px;
+	left: 50%;
+	border:20px solid transparent;
+	border-bottom-color: #d8d8d8;
+	position: absolute;
+	content:"";
+	z-index: 11;
+}
+
+.bubble-chart svg{
+	margin: 0 auto;
+	display: block;
+}
+.screenshot{
+	width: 50%;
+
+}
+.section-header{
+	padding: 10px;
+}
+.screenshot img{
+	width: 100%;
+
+}
+.left{
+	float:left;
+}
+.right{
+	float:right;
+}
+.clear{
+	clear: both;
+}
+.center{
+	text-align: center;
+}
+.title{
+	font-weight: bold;
+}
+.stats-table{
+    float: left;
+    border-collapse:collapse;
+}
+.metrics{
+
+	background: #ccc;
+	margin: 10px 20px;
+	padding: 10px 20px;
+}
+.dashboard{
+	width: 50%;
+}
+.dashboard .metrics{
+	width: 35%;
+	height:55px;
+}
+.time-stats{
+	width: 30%;
+}
+
+.text-left{
+	text-align: left;
+}
+.text-right{
+	text-align: right;
+}
+.css{
+
+	background:#1F77B4;
+	font-weight: bold;
+}
+.js{
+
+	background:#AEC7E8;
+	font-webackgroundight: bold;
+}
+.images{
+
+	background:#AEC7E8;
+	font-weight: bold;
+}
+.fonts{
+
+	background:#FFBB78;
+	font-weight: bold;
+}
+.others{
+
+	background:#2CA02C;
+	font-weight: bold;
+}
+.section{
+	width:100%;
+	height:100%;
+}
+.nav{
+	position: fixed;
+	width: 80px;
+	right: 0;
+	top: 0;
+}
+.prev{
+position: relative;
+margin-bottom: 80px;
+}
+.prev::after{
+	content: " ";
+	position: absolute;
+	border: 40px solid transparent;
+	border-bottom-color: #eee;
+
+}
+.current{
+	position: relative;
+    font-size: 18px;
+}
+
+.next{
+	position: relative;
+
+
+}
+.next::after{
+
+	content:" ";
+	position: absolute;
+	border:40px solid transparent;
+	border-top-color: #eee;
+
+}

@@ -1,0 +1,13 @@
+{
+  "name": "perf-phantomas",
+  "version": "0.0.1",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components"
+  ],
+  "dependencies": {
+    "d3": "~3.5.6",
+    "bootstrap": "~3.3.5"
+  }
+}

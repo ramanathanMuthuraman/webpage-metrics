@@ -1,0 +1,87 @@
+@import "../components/bootstrap/less/bootstrap.less";
+
+.flex{
+    display: flex;
+     justify-content:center;
+     align-items: center;
+}
+.clear{
+  clear: both;
+}
+.center{
+  text-align: center;
+}
+.title{
+  font-weight: bold;
+}
+.break{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    cursor: pointer;
+}
+.app-container {
+  width:90%;
+  margin:10px auto;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  .input-group{
+  	width:100%;
+  	.helper-text{
+  		padding: 9px;
+      border-radius: 2px;
+  	}
+    .actions{
+      margin:0 0 0 5px;
+    }
+  }
+  .page{
+    .bubble-chart{
+      svg{
+        margin: 0 auto;
+        display: block;
+        circle{
+          cursor:pointer;
+        }
+      }
+
+    }
+    .metrics{
+        .clear;
+        background: #ccc;
+        margin: 10px 20px;
+        padding: 10px 20px;
+        overflow: hidden;
+    }
+
+  }
+}
+
+.tp-holder {
+    width:90%;
+    color: #333;
+    display: none;
+    font-size: 12px;
+    position: absolute;
+    text-align: center;
+    z-index: 10;
+
+
+}
+.tp-arrow
+{
+    border: 10px solid transparent;
+    border-bottom-color: #ddd;
+    border-top: 0;
+    width: 10px;
+    position:relative;
+}
+.tp-content {
+   border: 1px solid #d8d8d8;
+   background: #eee;
+   padding: 10px;
+   border-radius: 5px;
+}
+
+
+
