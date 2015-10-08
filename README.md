@@ -1,18 +1,29 @@
+# webpage-metrics
 
-     ,-----.,--.                  ,--. ,---.   ,--.,------.  ,------.
-    '  .--./|  | ,---. ,--.,--. ,-|  || o   \  |  ||  .-.  \ |  .---'
-    |  |    |  || .-. ||  ||  |' .-. |`..'  |  |  ||  |  \  :|  `--, 
-    '  '--'\|  |' '-' ''  ''  '\ `-' | .'  /   |  ||  '--'  /|  `---.
-     `-----'`--' `---'  `----'  `---'  `--'    `--'`-------' `------'
-    ----------------------------------------------------------------- 
+Tool to generate performance metrics for webpage 
 
+## Installation
 
-Hi there! Welcome to Cloud9 IDE!
+Download the repo and navigate to the root folder and install the dependencies
 
-To get you started, create some files, play with the terminal,
-or visit http://docs.c9.io for our documentation.
-If you want, you can also go watch some training videos at
-http://www.youtube.com/user/c9ide.
+```
+npm install
 
-Happy coding!
-The Cloud9 IDE team
+```
+
+## Usage
+
+Run the below gulp task to get the coverage reports. 
+
+```
+gulp
+
+```
+
+## Demo
+
+You can check the metrics results [here] (http://webpage-metrics-myjournal.c9.io/)
+
+## License
+
+MIT
