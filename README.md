@@ -13,7 +13,7 @@ npm install
 
 ## Usage
 
-Run the below gulp task to get the coverage reports. 
+Run the below gulp task to get the metrics. 
 
 ```
 gulp
