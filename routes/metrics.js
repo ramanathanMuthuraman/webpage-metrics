@@ -4,7 +4,7 @@ var phantomas = require('phantomas');
 var url = require('url');
 var router = express.Router();
 var fs = require('fs');
-var url = require("url");
+var url = require('url');
 /* GET users listing. */
 router.get('/', function(req, res) {
 
@@ -70,7 +70,12 @@ router.get('/', function(req, res) {
 				'resource': json.metrics.timeFrontend,
 				'units': '%',
 				'info': ''
-				},  {
+				}, {
+				'title': 'AJAX calls',
+				'resource': json.metrics.otherSize,
+				'units': 'requests',
+				'info': json.offenders.otherCount
+				}, {
 				'title': 'Time To First CSS',
 				'resource': json.metrics.timeToFirstCss,
 				'units': 'ms',
@@ -129,10 +134,6 @@ router.get('/', function(req, res) {
 				'title': 'JS',
 				'value': json.metrics.jsSize,
 				'files': json.offenders.jsCount
-				}, {
-				'title': 'Others',
-				'value': json.metrics.otherSize,
-				'files': json.offenders.otherCount
 				}, {
 				'title': 'Images',
 				'value': json.metrics.imageSize,

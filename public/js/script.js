@@ -111,7 +111,7 @@ function generateChart(fileType, el) {
         .html(' (' + (d.value / 1000000)
           .toFixed(2) + ' MB transferred in ' + d.files.length + ' request(s))');
       tooltip.select('.percent')
-        .html('<pre>' + d.files.join('\n') + '</pre>');
+        .html('<pre><span class="marker">*</span>' + d.files.join('\n <span class="marker">*</span>') + '</pre>');
       tooltip.style('display', 'block');
 
       var tooltip_width = Math.round(tooltip.style('width')
@@ -158,8 +158,9 @@ function generateChart(fileType, el) {
         html += '<p class="title pull-right">' + stats[j].resource + ' ' + stats[j].units + '</p>';
 
         if (hasFileInformation) {
-          html += '<p class="clear center"><div title="' + stats[j].info.join('\n');
-          html += '" class="break"><pre>' + stats[j].info.join('\n') + '</pre></div>';
+          html += '<p class="clear center">';
+          html += '<div class="break"><pre> <span class="marker">*</span>';
+          html += stats[j].info.join('\n <span class="marker">*</span>') + '</pre></div></p>';
         }
         html += '</div>';
       }
@@ -225,10 +226,24 @@ function generateChart(fileType, el) {
 
   d3.select('#submit')
     .on('click', function() {
-      d3.select('#container').html("");
+      d3.select('#container').html('');
       var param = d3.select('#url_text').node().value;
       //param = 'http://ramanathanmuthuraman.github.io/React-Duck2Go/';
-      var url = 'metrics?url=' + param;
-      fetchData(url);
+      var expression = /[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/gi;
+      var regex = new RegExp(expression);
+      if (param.match(regex) ){
+        var url = 'metrics?url=' + param;
+        fetchData(url);
+      }
+      else{
+        alert('Enter valid URL');
+      }
 
     });
+  d3.select('#clear')
+    .on('click', function() {
+       d3.select('#container').html('');
+       d3.select('#url_text').node().value = '';
+       d3.select('#url_text').node().focus();
+     });
+     d3.select('#url_text').node().focus();
