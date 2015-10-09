@@ -145,7 +145,7 @@ router.get('/', function(req, res) {
 				}]
 		});
 		//delete the temp results folder
-		rimraf(current_result_path, function(err){
+		rimraf.sync(current_result_path, function(err){
 			if(err){
 				return err;
 			}
