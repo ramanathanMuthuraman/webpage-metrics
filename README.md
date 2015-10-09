@@ -1,6 +1,6 @@
 # webpage-metrics
 
-Tool to generate performance metrics for webpage 
+Tool to generate performance metrics for given webpage URL using [phantomas] (https://github.com/macbre/phantomas). It collects various statistics of web pages ranging from load times, number of request, caching and gzipping strategies. Also includes [PageSpeed Insights] (https://developers.google.com/speed/pagespeed/) and [yslow] (http://yslow.org/) results.  
 
 ## Installation
 
