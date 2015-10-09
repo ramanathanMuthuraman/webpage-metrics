@@ -111,7 +111,7 @@ function generateChart(fileType, el) {
         .html(' (' + (d.value / 1000000)
           .toFixed(2) + ' MB transferred in ' + d.files.length + ' request(s))');
       tooltip.select('.percent')
-        .html('<pre><span class="marker">*</span>' + d.files.join('\n <span class="marker">*</span>') + '</pre>');
+        .html('<pre><span class="marker">&gt;</span>' + d.files.join('\n <span class="marker">&gt;</span>') + '</pre>');
       tooltip.style('display', 'block');
 
       var tooltip_width = Math.round(tooltip.style('width')
@@ -159,8 +159,8 @@ function generateChart(fileType, el) {
 
         if (hasFileInformation) {
           html += '<p class="clear center">';
-          html += '<div class="break"><pre> <span class="marker">*</span>';
-          html += stats[j].info.join('\n <span class="marker">*</span>') + '</pre></div></p>';
+          html += '<div class="break"><pre> <span class="marker">&gt;</span>';
+          html += stats[j].info.join('\n <span class="marker">&gt;</span>') + '</pre></div></p>';
         }
         html += '</div>';
       }

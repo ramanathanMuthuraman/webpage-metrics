@@ -6783,7 +6783,6 @@ button.close {
   overflow: hidden;
   text-overflow: ellipsis;
   display: block;
-  cursor: pointer;
 }
 .app-container {
   width: 90%;
@@ -6800,6 +6799,10 @@ button.close {
 .app-container .input-group .actions {
   margin: 0 0 0 5px;
 }
+.app-container .page .marker {
+  font-size: 20px;
+  padding-right: 10px;
+}
 .app-container .page .bubble-chart svg {
   margin: 0 auto;
   display: block;
@@ -6809,7 +6812,7 @@ button.close {
 }
 .app-container .page .metrics {
   clear: both;
-  background: #ccc;
+  background: #C1DEF3;
   margin: 10px 20px;
   padding: 10px 20px;
   overflow: hidden;
