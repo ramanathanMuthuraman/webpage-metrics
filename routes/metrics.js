@@ -4,7 +4,7 @@ var phantomas = require('phantomas');
 var url = require('url');
 var router = express.Router();
 var fs = require('fs');
-var url = require('url');
+var rimraf= require('rimraf');
 /* GET users listing. */
 router.get('/', function(req, res) {
 
@@ -143,6 +143,12 @@ router.get('/', function(req, res) {
 				'value': json.metrics.webfontSize,
 				'files': json.offenders.webfontCount
 				}]
+		});
+		//delete the temp results folder
+		rimraf(current_result_path, function(err){
+			if(err){
+				return err;
+			}
 		});
 		res.send(JSON.stringify(metrics));
 
