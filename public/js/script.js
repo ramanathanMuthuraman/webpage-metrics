@@ -196,7 +196,7 @@ function generateChart(fileType, el) {
   }*/
 
   function fetchData(url) {
-    var errorMessage = 'Unable to access the URL. Please try a differernt URL';
+    var errorMessage = 'Unable to access the URL. Please try a differernt one';
     d3.json(url, function(err, pages) {
 
       if (err) {
