@@ -5,9 +5,9 @@
   "authors": [
     "ramanathan"
   ],
-  "description": "Perfomance tool for finding webpage metrics",
+  "description": "Performance tool for finding webpage metrics",
   "keywords": [
-    "perfomance",
+    "performance",
     "phantomas",
     "d3",
     "charts"
